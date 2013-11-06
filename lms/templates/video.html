@@ -6,7 +6,7 @@
 
 <div
     id="video_${id}"
-    class="video"
+    class="video closed"
 
     data-streams="${youtube_streams}"
 
@@ -45,16 +45,14 @@
 
     <div class="tc-wrapper">
       <a href="#transcript-captions" class="sr">Skip to clickable transcript video links.</a>
-      
+
       <article class="video-wrapper">
-          <div class="video-player-pre"></div>
+          <span tabindex="0" class="spinner" aria-label="${_('Loading')}"></span>
 
           <section class="video-player">
               <div id="${id}"></div>
               <h3 class="hidden">${_('ERROR: No playable video sources found!')}</h3>
           </section>
-
-          <div class="video-player-post"></div>
 
           <section class="video-controls">
               <div class="slider" title="Video position"></div>
@@ -81,7 +79,7 @@
                       <a href="#" class="add-fullscreen" title="${_('Fill browser')}" role="button" aria-disabled="false">${_('Fill browser')}</a>
                       <a href="#" class="quality_control" title="${_('HD off')}" role="button" aria-disabled="false">${_('HD off')}</a>
 
-                      <a href="#" class="hide-subtitles" title="${_('Turn off captions')}" role="button" aria-disabled="false">${_('Turn off captions')}</a>
+                      <a href="#" class="hide-subtitles" title="${_('Turn on captions')}" role="button" aria-disabled="false">${_('Turn on captions')}</a>
                   </div>
               </div>
           </section>
